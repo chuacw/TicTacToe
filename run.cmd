@@ -1,1 +1,2 @@
-npm run dev
+call tsc
+call npm run dev

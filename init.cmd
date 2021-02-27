@@ -1,2 +1,2 @@
-npm ci 
-tsc 
+call npm ci 
+call tsc 
