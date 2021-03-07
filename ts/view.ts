@@ -3,11 +3,11 @@ import { ArrayEmptyFill, Data, playEventListenerType } from './types.js';
 
 export class View {
   playEvent: Event;
-  message!: HTMLElement;
+  message: HTMLElement;
   cells!: HTMLDivElement[];
-  resetButton!: HTMLButtonElement;
-  board!: HTMLDivElement;
-  break!: HTMLElement;
+  resetButton: HTMLButtonElement;
+  board: HTMLDivElement;
+  break: HTMLElement;
 
   constructor(playEventListener: playEventListenerType, 
     resetButtonEventListener: (ev: MouseEvent) => void) {
@@ -44,9 +44,7 @@ export class View {
       const cell = document.createElement('div');
       cell.className = 'cell'; // necessary for CSS rendering!
 
-      cell.addEventListener('click', () => {
-        this.playEvent.trigger(i);
-      });
+      cell.addEventListener('click', () => this.playEvent.trigger(i));
 
       this.board.appendChild(cell);
 
